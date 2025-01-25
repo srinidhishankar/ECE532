@@ -1,0 +1,6 @@
+16:34:19 **** Incremental Build of configuration Debug for project echo_server ****
+make all 
+make: Nothing to be done for 'all'.
+
+16:34:19 Build Finished (took 170ms)
+
