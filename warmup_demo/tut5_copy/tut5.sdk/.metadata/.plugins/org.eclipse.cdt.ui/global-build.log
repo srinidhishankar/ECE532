@@ -1,0 +1,574 @@
+20:42:30 **** Incremental Build of configuration Debug for project echo_server ****
+make all 
+make: Nothing to be done for 'all'.
+20:48:08 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:239:12: warning: unused variable 'value_recv' [-Wunused-variable]
+   uint32_t value_recv = 0;
+            ^~~~~~~~~~
+../src/main.c:238:12: warning: unused variable 'value_send' [-Wunused-variable]
+   uint32_t value_send = 0;
+            ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137656	   1584	3960744	4099984	 3e8f90	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+20:48:15 **** Incremental Build of configuration Debug for project echo_server ****
+make all 
+make: Nothing to be done for 'all'.
+20:50:02 **** Auto Build of project echo_server_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/axidma_v9_8/src"
+make -C microblaze_0/libsrc/axidma_v9_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/axiethernet_v5_8/src"
+make -C microblaze_0/libsrc/axiethernet_v5_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/lwip202_v1_2/src"
+make -C microblaze_0/libsrc/lwip202_v1_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/axidma_v9_8/src"
+make -C microblaze_0/libsrc/axidma_v9_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling axidma"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/axiethernet_v5_8/src"
+make -C microblaze_0/libsrc/axiethernet_v5_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling axiethernet"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
+make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/intc_v3_8/src"
+make -C microblaze_0/libsrc/intc_v3_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/lwip202_v1_2/src"
+make -C microblaze_0/libsrc/lwip202_v1_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling lwip src and adapter files"
+contrib/ports/xilinx/netif/xaxiemacif_hw.c: In function 'init_axiemac':
+contrib/ports/xilinx/netif/xaxiemacif_hw.c:54:11: warning: unused variable 'mac_address' [-Wunused-variable]
+  unsigned mac_address = (unsigned)(UINTPTR)(netif->state);
+           ^~~~~~~~~~~
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c: In function 'get_phy_negotiated_speed':
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c:199:6: warning: unused variable 'temp' [-Wunused-variable]
+  u16 temp;
+      ^~~~
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c: In function 'get_IEEE_phy_speed':
+contrib/ports/xilinx/netif/xaxiemacif_physpeed.c:600:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+contrib/ports/xilinx/netif/xaxiemacif.c: In function 'xaxiemacif_init':
+contrib/ports/xilinx/netif/xaxiemacif.c:681:16: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+  netif->output = xaxiemacif_output;
+                ^
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c: In function 'is_checksum_valid':
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:195:6: warning: passing argument 2 of 'inet_chksum_pseudo' makes integer from pointer without a cast [-Wint-conversion]
+      (ip_addr_t *)&ehdr->ip.src, (ip_addr_t *)&ehdr->ip.dest,
+      ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'u8_t {aka unsigned char}' but argument is of type 'ip_addr_t * {aka struct ip4_addr *}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:195:34: warning: passing argument 3 of 'inet_chksum_pseudo' makes integer from pointer without a cast [-Wint-conversion]
+      (ip_addr_t *)&ehdr->ip.src, (ip_addr_t *)&ehdr->ip.dest,
+                                  ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'u16_t {aka short unsigned int}' but argument is of type 'ip_addr_t * {aka struct ip4_addr *}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:196:6: warning: passing argument 4 of 'inet_chksum_pseudo' makes pointer from integer without a cast [-Wint-conversion]
+      proto, tcp_payload_len));
+      ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'const ip4_addr_t * {aka const struct ip4_addr *}' but argument is of type 'u8_t {aka unsigned char}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+In file included from ../../../include/lwip/ip_addr.h:41:0,
+                 from ../../../include/lwip/inet_chksum.h:43,
+                 from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:
+contrib/ports/xilinx/netif/xaxiemacif_dma.c:196:13: warning: passing argument 5 of 'inet_chksum_pseudo' makes pointer from integer without a cast [-Wint-conversion]
+      proto, tcp_payload_len));
+             ^
+../../../include/lwip/def.h:96:29: note: in definition of macro 'htons'
+ #define htons(x) lwip_htons(x)
+                             ^
+In file included from contrib/ports/xilinx/netif/xaxiemacif_dma.c:47:0:
+../../../include/lwip/inet_chksum.h:81:7: note: expected 'const ip4_addr_t * {aka const struct ip4_addr *}' but argument is of type 'u16_t {aka short unsigned int}'
+ u16_t inet_chksum_pseudo(struct pbuf *p, u8_t proto, u16_t proto_len,
+       ^~~~~~~~~~~~~~~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
+make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/tmrctr_v4_5/src"
+make -C microblaze_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling tmrctr"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+20:50:21 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/i2c_access.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c_access.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/i2c_access.d" -MT"src/i2c_access.o" -o "src/i2c_access.o" "../src/i2c_access.c"
+'Finished building: ../src/i2c_access.c'
+' '
+'Building file: ../src/iic_phyreset.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/iic_phyreset.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/iic_phyreset.d" -MT"src/iic_phyreset.o" -o "src/iic_phyreset.o" "../src/iic_phyreset.c"
+'Finished building: ../src/iic_phyreset.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:239:12: warning: unused variable 'value_recv' [-Wunused-variable]
+   uint32_t value_recv = 0;
+            ^~~~~~~~~~
+../src/main.c:238:12: warning: unused variable 'value_send' [-Wunused-variable]
+   uint32_t value_send = 0;
+            ^~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/platform_mb.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_mb.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform_mb.d" -MT"src/platform_mb.o" -o "src/platform_mb.o" "../src/platform_mb.c"
+'Finished building: ../src/platform_mb.c'
+' '
+'Building file: ../src/sfp.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sfp.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/sfp.d" -MT"src/sfp.o" -o "src/sfp.o" "../src/sfp.c"
+'Finished building: ../src/sfp.c'
+' '
+'Building file: ../src/si5324.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/si5324.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/si5324.d" -MT"src/si5324.o" -o "src/si5324.o" "../src/si5324.c"
+'Finished building: ../src/si5324.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137656	   1584	3960744	4099984	 3e8f90	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+20:51:40 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:245:12: warning: unused variable 'value_recv' [-Wunused-variable]
+   uint32_t value_recv = 0;
+            ^~~~~~~~~~
+../src/main.c:244:12: warning: unused variable 'value_send' [-Wunused-variable]
+   uint32_t value_send = 0;
+            ^~~~~~~~~~
+../src/main.c:221:26: warning: unused variable 'btnl' [-Wunused-variable]
+  volatile unsigned int * btnl = (unsigned int *) 0x40050000;
+                          ^~~~
+../src/main.c:220:26: warning: unused variable 'btnr' [-Wunused-variable]
+  volatile unsigned int * btnr = (unsigned int *) 0x40040000;
+                          ^~~~
+../src/main.c:219:26: warning: unused variable 'btnc' [-Wunused-variable]
+  volatile unsigned int * btnc = (unsigned int *) 0x40030000;
+                          ^~~~
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137704	   1584	3960744	4100032	 3e8fc0	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+20:53:01 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:247:12: warning: comparison between pointer and integer
+   if (btnl == 1){
+            ^~
+../src/main.c:249:3: error: expected ';' before '}' token
+   }
+   ^
+../src/main.c:245:12: warning: unused variable 'value_recv' [-Wunused-variable]
+   uint32_t value_recv = 0;
+            ^~~~~~~~~~
+../src/main.c:244:12: warning: variable 'value_send' set but not used [-Wunused-but-set-variable]
+   uint32_t value_send = 0;
+            ^~~~~~~~~~
+../src/main.c:220:26: warning: unused variable 'btnr' [-Wunused-variable]
+  volatile unsigned int * btnr = (unsigned int *) 0x40040000;
+                          ^~~~
+../src/main.c:219:26: warning: unused variable 'btnc' [-Wunused-variable]
+  volatile unsigned int * btnc = (unsigned int *) 0x40030000;
+                          ^~~~
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+../src/main.c:216:26: warning: unused variable 'led' [-Wunused-variable]
+  volatile unsigned int * led = (unsigned int *) 0x40010000;
+                          ^~~
+make: *** [src/subdir.mk:50: src/main.o] Error 1
+20:53:03 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:247:12: warning: comparison between pointer and integer
+   if (btnl == 1){
+            ^~
+../src/main.c:245:12: warning: unused variable 'value_recv' [-Wunused-variable]
+   uint32_t value_recv = 0;
+            ^~~~~~~~~~
+../src/main.c:244:12: warning: variable 'value_send' set but not used [-Wunused-but-set-variable]
+   uint32_t value_send = 0;
+            ^~~~~~~~~~
+../src/main.c:220:26: warning: unused variable 'btnr' [-Wunused-variable]
+  volatile unsigned int * btnr = (unsigned int *) 0x40040000;
+                          ^~~~
+../src/main.c:219:26: warning: unused variable 'btnc' [-Wunused-variable]
+  volatile unsigned int * btnc = (unsigned int *) 0x40030000;
+                          ^~~~
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+../src/main.c:216:26: warning: unused variable 'led' [-Wunused-variable]
+  volatile unsigned int * led = (unsigned int *) 0x40010000;
+                          ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137736	   1584	3960744	4100064	 3e8fe0	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+20:53:12 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:247:12: warning: comparison between pointer and integer
+   if (btnl == 1){
+            ^~
+../src/main.c:245:12: warning: unused variable 'value_recv' [-Wunused-variable]
+   uint32_t value_recv = 0;
+            ^~~~~~~~~~
+../src/main.c:244:12: warning: variable 'value_send' set but not used [-Wunused-but-set-variable]
+   uint32_t value_send = 0;
+            ^~~~~~~~~~
+../src/main.c:220:26: warning: unused variable 'btnr' [-Wunused-variable]
+  volatile unsigned int * btnr = (unsigned int *) 0x40040000;
+                          ^~~~
+../src/main.c:219:26: warning: unused variable 'btnc' [-Wunused-variable]
+  volatile unsigned int * btnc = (unsigned int *) 0x40030000;
+                          ^~~~
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+../src/main.c:216:26: warning: unused variable 'led' [-Wunused-variable]
+  volatile unsigned int * led = (unsigned int *) 0x40010000;
+                          ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137716	   1584	3960748	4100048	 3e8fd0	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+20:54:11 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:247:12: warning: comparison between pointer and integer
+   if (btnl == 1){
+            ^~
+../src/main.c:220:26: warning: unused variable 'btnr' [-Wunused-variable]
+  volatile unsigned int * btnr = (unsigned int *) 0x40040000;
+                          ^~~~
+../src/main.c:219:26: warning: unused variable 'btnc' [-Wunused-variable]
+  volatile unsigned int * btnc = (unsigned int *) 0x40030000;
+                          ^~~~
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137884	   1584	3960748	4100216	 3e9078	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+20:54:26 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:247:12: warning: comparison between pointer and integer
+   if (btnl == 1){
+            ^~
+../src/main.c:220:26: warning: unused variable 'btnr' [-Wunused-variable]
+  volatile unsigned int * btnr = (unsigned int *) 0x40040000;
+                          ^~~~
+../src/main.c:219:26: warning: unused variable 'btnc' [-Wunused-variable]
+  volatile unsigned int * btnc = (unsigned int *) 0x40030000;
+                          ^~~~
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137852	   1584	3960748	4100184	 3e9058	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+20:55:01 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:247:12: warning: comparison between pointer and integer
+   if (btnl == 1){
+            ^~
+../src/main.c:220:26: warning: unused variable 'btnr' [-Wunused-variable]
+  volatile unsigned int * btnr = (unsigned int *) 0x40040000;
+                          ^~~~
+../src/main.c:219:26: warning: unused variable 'btnc' [-Wunused-variable]
+  volatile unsigned int * btnc = (unsigned int *) 0x40030000;
+                          ^~~~
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137884	   1584	3960748	4100216	 3e9078	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+20:55:21 **** Incremental Build of configuration Debug for project echo_server ****
+make all 
+make: Nothing to be done for 'all'.
+20:56:21 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:247:3: error: too few arguments to function 'xil_printf'
+   xil_printf()
+   ^~~~~~~~~~
+In file included from c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/main.c:34:
+c:\xilinx\sdk\2018.3\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:229:9: note: declared here
+ void    _EXFUN(xil_printf, (const char*, ...));
+         ^
+../src/main.c:248:3: error: expected ';' before 'if'
+   if (*btnl){
+   ^~
+../src/main.c:245:12: warning: unused variable 'value_recv' [-Wunused-variable]
+   uint32_t value_recv = 0;
+            ^~~~~~~~~~
+../src/main.c:244:12: warning: unused variable 'value_send' [-Wunused-variable]
+   uint32_t value_send = 0;
+            ^~~~~~~~~~
+../src/main.c:221:26: warning: unused variable 'btnl' [-Wunused-variable]
+  volatile unsigned int * btnl = (unsigned int *) 0x40050000;
+                          ^~~~
+../src/main.c:220:26: warning: unused variable 'btnr' [-Wunused-variable]
+  volatile unsigned int * btnr = (unsigned int *) 0x40040000;
+                          ^~~~
+../src/main.c:219:26: warning: unused variable 'btnc' [-Wunused-variable]
+  volatile unsigned int * btnc = (unsigned int *) 0x40030000;
+                          ^~~~
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+../src/main.c:216:26: warning: unused variable 'led' [-Wunused-variable]
+  volatile unsigned int * led = (unsigned int *) 0x40010000;
+                          ^~~
+../src/main.c:215:26: warning: unused variable 'sw' [-Wunused-variable]
+  volatile unsigned int * sw = (unsigned int *) 0x40000000;
+                          ^~
+make: *** [src/subdir.mk:50: src/main.o] Error 1
+20:56:24 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:220:26: warning: unused variable 'btnr' [-Wunused-variable]
+  volatile unsigned int * btnr = (unsigned int *) 0x40040000;
+                          ^~~~
+../src/main.c:219:26: warning: unused variable 'btnc' [-Wunused-variable]
+  volatile unsigned int * btnc = (unsigned int *) 0x40030000;
+                          ^~~~
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137884	   1584	3960748	4100216	 3e9078	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+20:56:27 **** Incremental Build of configuration Debug for project echo_server ****
+make all 
+make: Nothing to be done for 'all'.
+21:17:11 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:250:13: warning: unused variable 'rec' [-Wunused-variable]
+    uint16_t rec;
+             ^~~
+../src/main.c:249:13: warning: unused variable 'send' [-Wunused-variable]
+    uint16_t send;
+             ^~~~
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137932	   1584	3960748	4100264	 3e90a8	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+21:23:10 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137932	   1584	3960748	4100264	 3e90a8	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '

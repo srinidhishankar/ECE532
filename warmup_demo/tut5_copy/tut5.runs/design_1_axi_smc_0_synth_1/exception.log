@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\srini\tut5_copy\tut5.runs\design_1_axi_smc_0_synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied

@@ -1,0 +1,25 @@
+21:23:10 **** Auto Build of configuration Debug for project echo_server ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../echo_server_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:218:26: warning: unused variable 'btnd' [-Wunused-variable]
+  volatile unsigned int * btnd = (unsigned int *) 0x40020000;
+                          ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: echo_server.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../echo_server_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "echo_server.elf"  ./src/i2c_access.o ./src/iic_phyreset.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: echo_server.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size echo_server.elf  |tee "echo_server.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 137932	   1584	3960748	4100264	 3e90a8	echo_server.elf
+'Finished building: echo_server.elf.size'
+' '
+
+21:23:11 Build Finished (took 1s.248ms)
+

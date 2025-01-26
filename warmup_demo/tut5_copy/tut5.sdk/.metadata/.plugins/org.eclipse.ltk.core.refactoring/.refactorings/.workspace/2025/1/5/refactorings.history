@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;echo_server_bsp&apos; to &apos;echo_server_bsp_old&apos;" description="Rename resource &apos;echo_server_bsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/echo_server_bsp" name="echo_server_bsp_old" stamp="1737854357115" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;echo_server_bsp_old&apos; to &apos;echo_server_bsp&apos;" description="Rename resource &apos;echo_server_bsp_old&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/echo_server_bsp_old" name="echo_server_bsp" stamp="1737854422742" updateReferences="true"/>
+</session>
