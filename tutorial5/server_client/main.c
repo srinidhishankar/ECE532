@@ -234,6 +234,26 @@ int main()
 		// Note - should be non-blocking
 		// Note - can check is_connected global var to see if connection open
 
+		volatile unsigned int* sw = 0x40000000
+		volatile unsigned int* led = 0x40000000
+		volatile unsigned int* BTNL = 0x40000000
+		volatile unsigned int* BTNR = 0x40000000
+
+		uint32_t value_send = 0;
+		uint32_t value_recv = 0;
+
+		if(*BTNL)
+		{
+			value_send = ~(~value_send & 0x11110000) & (*sw >> 16);
+			*led = (~(~value_recv & 0x00001111) << 16));
+
+		}
+		else if(*BTNR)
+		{
+			value_send = ~(~value_send & 0x00001111) & *sw;
+			*led = ~(~value_recv & 0x11110000));
+
+		}
 
 		//END OF ADDED CODE
 
