@@ -2,11 +2,11 @@
 # Webtalk v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # 
-# Start of session at: Sat Jan 25 15:41:35 2025
-# Process ID: 29968
-# Current directory: C:/Users/srini/Documents/tutorial5/tut5/tut5.sdk/webtalk
+# Start of session at: Sat Jan 25 18:32:40 2025
+# Process ID: 2376
+# Current directory: C:/Users/srini/Documents/ECE552/ECE532/tutorial5/tut5/tut5.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
-# Log file: C:/Users/srini/Documents/tutorial5/tut5/tut5.sdk/webtalk/webtalk.log
-# Journal file: C:/Users/srini/Documents/tutorial5/tut5/tut5.sdk/webtalk\webtalk.jou
+# Log file: C:/Users/srini/Documents/ECE552/ECE532/tutorial5/tut5/tut5.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/srini/Documents/ECE552/ECE532/tutorial5/tut5/tut5.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

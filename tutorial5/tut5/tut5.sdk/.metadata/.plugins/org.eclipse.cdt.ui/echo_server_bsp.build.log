@@ -1,4 +1,4 @@
-16:32:21 **** Build of project echo_server_bsp ****
+18:29:38 **** Build of project echo_server_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/axidma_v9_8/src"
 make -C microblaze_0/libsrc/axidma_v9_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -50,5 +50,5 @@ make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-
 "Compiling uartlite"
 'Finished building libraries'
 
-16:32:29 Build Finished (took 8s.595ms)
+18:29:54 Build Finished (took 15s.865ms)
 
