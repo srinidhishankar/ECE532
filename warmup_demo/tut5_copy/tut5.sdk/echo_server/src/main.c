@@ -244,23 +244,16 @@ int main()
 		uint32_t value_send = 0;
 		uint32_t value_recv = 0;
 
-
-		if (*btnl){
-
-			value_send = (*sw << 16);
-
-
-
-			*led = (value_recv >> 16);
-			xil_printf("Left Pressed, value_send = %x\n", value_send);
-		}
-		else if (*btnr)
+		if(*BTNL)
 		{
-			value_send = *sw;
-			*led = value_recv & 0xFFFF;
+			value_send = ~(~value_send & 0x11110000) & (*sw >> 16);
+			*led = (~(~value_recv & 0x00001111) << 16));
+
 		}
-		else if (*btnc)
+		else if(*BTNR)
 		{
+			value_send = ~(~value_send & 0x00001111) & *sw;
+			*led = ~(~value_recv & 0x11110000));
 
 		}
 
